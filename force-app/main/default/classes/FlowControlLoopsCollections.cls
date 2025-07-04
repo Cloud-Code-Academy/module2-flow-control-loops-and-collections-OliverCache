@@ -111,7 +111,7 @@ public with sharing class FlowControlLoopsCollections {
     public static String checkEvenOdd(Integer a) {
         if  (a == null) {
             return null;
-        } else if (a % 2 == 0) {
+        } else if (Math.mod(a, 2) == 0) {
             return 'Even';
         } else {
             return 'Odd';
