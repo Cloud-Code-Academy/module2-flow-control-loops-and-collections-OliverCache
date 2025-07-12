@@ -354,8 +354,16 @@ public with sharing class FlowControlLoopsCollections {
     public static Decimal countMoney() {
         // The list of money in the wallet, represented in dollars and cents
         List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; //DO NOT CHANGE
+        Decimal total = 0;
 
-        return null; // Replace null with the variable you used to store the result
+        for (Decimal money: moneyInWallet) {
+            total += money;
+            if (total > 40) {
+                break;
+            }
+        }
+
+        return total; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -366,7 +374,7 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Map<String, Integer> addItemsToMap() {
         // Initialize an empty Map
-
+        Map<Object, Object> mapName = new Map<Object, Object>();
         // Add key-value pairs to the Map
         // add Apples => 5
         // add Oranges => 10
