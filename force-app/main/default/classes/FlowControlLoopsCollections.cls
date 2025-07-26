@@ -373,16 +373,16 @@ public with sharing class FlowControlLoopsCollections {
      * @return The Map of fruits and their quantities.
      */
     public static Map<String, Integer> addItemsToMap() {
-        // Initialize an empty Map
-        Map<Object, Object> mapName = new Map<Object, Object>();
-        // Add key-value pairs to the Map
-        // add Apples => 5
-        // add Oranges => 10
-        // add Bananas => 15
-        // add Pears => 20
-        // add Grapes => 25
-
-        return null; // Replace null with the variable you used to store the result
+        // Initialize a map with keys-values pairs
+        Map<String, Integer> fruitMap = new Map<String, Integer>{
+        // Add key-value pairs 
+        'Apples' => 5,
+        'Oranges' => 10,
+        'Bananas' => 15,
+        'Pears' => 20,
+        'Grapes' => 25
+        };
+        return fruitMap; // Replace null with the variable you used to store the result
     }
 
     /**
