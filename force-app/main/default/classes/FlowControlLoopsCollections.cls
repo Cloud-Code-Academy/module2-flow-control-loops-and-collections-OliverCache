@@ -395,18 +395,22 @@ public with sharing class FlowControlLoopsCollections {
      * @return The salary of the employee, or null if the employee is not found in the Map.
      */
     public static Integer getSalary(String employeeName) {
-        // Initialize a Map
+        // Initialize a Map with employee names and their salaries
+        Map<String, Integer> employeeSalary = new Map<String, Integer>{
+        'John Doe' => 50000,
+        'Jane Smith' => 60000,
+        'Sam Brown' => 55000,
+        'Alice Johnson' => 65000
+        };
 
-        // Add key-value pairs to the Map
-        // add John Doe => 50000
-        // add Jane Smith => 60000
-        // add Sam Brown => 55000
-        // add Alice Johnson => 65000
+        Integer salary = null; // Initialized
+        
+        // Check if the map contains the employee name name
+        if (employeeSalary.containsKey(employeeName)) {
+            salary = employeeSalary.get(employeeName); // Return the salary if found
+        }
 
-        // Get the salary of the employee
-
-        // Return the salary of the employee, or null if the employee is not found in the Map
-        return null; // Replace null with the variable you used to store the result
+        return salary; // Will say null if not found
     }
 
     /**
