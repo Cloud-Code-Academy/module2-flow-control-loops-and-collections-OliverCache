@@ -127,7 +127,7 @@ public with sharing class FlowControlLoopsCollections {
     public static String checkString(String a) {
         if (a == null) {
             return 'Null';
-        } else if (a.isBlank()) {
+        } else if (String.isEmpty(a)) {
             return 'Empty';
         } else {
             return 'Contains Text';
