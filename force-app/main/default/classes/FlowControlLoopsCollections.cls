@@ -438,7 +438,7 @@ public with sharing class FlowControlLoopsCollections {
         for (String employee : employeeSalaries.keySet()) {
             Integer salary = employeeSalaries.get(employee);
             
-            if (salary > 550000) {
+            if (salary > 55000) {
                 highPaidEmployeeNames.add(employee);
             }
         }
