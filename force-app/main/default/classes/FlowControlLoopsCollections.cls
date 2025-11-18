@@ -29,12 +29,14 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        while ( x == null || y == null || x < y) {
+        if ( x == null || y == null || x < y) {
             return null;           
         }
         if (x > y) {
             return 'Hello World!';
         }
+        //required to handle all output possibilities 
+        return null;
     }
 
     /**
@@ -47,11 +49,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        if (age >= 18) {
-            return true;
-        } else {
-            return false;
-        }
+       return age >=18;
     }
 
     /**
@@ -77,6 +75,7 @@ public with sharing class FlowControlLoopsCollections {
                 largestNum = num2;
             }
         }
+        return largestNum;
     }
 
 
@@ -128,7 +127,7 @@ public with sharing class FlowControlLoopsCollections {
     public static String checkString(String a) {
         if (a == null) {
             return 'Null';
-        } else if (a.length() == 0) {
+        } else if (a.isEmpty(a)) {
             return 'Empty';
         } else {
             return 'Contains Text';
@@ -157,8 +156,8 @@ public with sharing class FlowControlLoopsCollections {
         } else if (score >= 60) {
             return 'D';
         } else {
-                return 'F';         
-            }
+            return 'F';         
+        }
     }
 
     /**
@@ -410,7 +409,7 @@ public with sharing class FlowControlLoopsCollections {
             salary = employeeSalary.get(employeeName); // Return the salary if found
         }
 
-        return salary; // Will say null if not found
+        return employeeSalary.get(employeeName); // Will say null if not found
     }
 
     /**
@@ -439,7 +438,7 @@ public with sharing class FlowControlLoopsCollections {
         for (String employee : employeeSalaries.keySet()) {
             Integer salary = employeeSalaries.get(employee);
             
-            if (salary > 50000) {
+            if (salary > 550000) {
                 highPaidEmployeeNames.add(employee);
             }
         }
