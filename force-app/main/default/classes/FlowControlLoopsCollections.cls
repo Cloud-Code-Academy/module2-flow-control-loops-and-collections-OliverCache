@@ -127,7 +127,7 @@ public with sharing class FlowControlLoopsCollections {
     public static String checkString(String a) {
         if (a == null) {
             return 'Null';
-        } else if (a.isEmpty(a)) {
+        } else if (a.isEmpty()) {
             return 'Empty';
         } else {
             return 'Contains Text';
@@ -191,7 +191,7 @@ public with sharing class FlowControlLoopsCollections {
         
         // Use a for loop to append 'Hello World!;' to the result string three times
          
-         for (Int i = 0; i < 3; i++){
+         for (Integer i = 0; i < 3; i++){
              helloWorldResult += 'Hello World!; ';
          }
         
